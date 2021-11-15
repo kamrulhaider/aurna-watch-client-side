@@ -17,7 +17,7 @@ const Product = (props) => {
                         <Card.Text>
                             {details.slice(0, 100)}...
                         </Card.Text>
-                        <h5>Price: {price}</h5>
+                        <h5>Price: $ {price}</h5>
                         <Link to={`/details/${_id}`}>
                             <button className="btn btn-outline-dark">Order Now</button>
                         </Link>

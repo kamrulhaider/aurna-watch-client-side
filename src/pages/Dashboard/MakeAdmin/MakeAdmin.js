@@ -28,6 +28,7 @@ const MakeAdmin = () => {
                 }
             })
         e.preventDefault()
+        e.target.reset()
     }
 
     return (

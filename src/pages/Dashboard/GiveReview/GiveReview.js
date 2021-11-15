@@ -26,11 +26,12 @@ const GiveReview = () => {
         })
             .then(res => res.json())
             .then(data => {
-                if (data.modifiedCount) {
+                if (data.acknowledged) {
                     alert('sucessfully posted')
                 }
             })
         e.preventDefault()
+        e.target.reset()
     }
 
     return (

@@ -10,13 +10,11 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [authError, setAuthError] = useState('');
-    const [admin, setAdmin] = useState(false)
-    // const [token, setToken] = useState('');
+    const [admin, setAdmin] = useState(false);
     // console.log(admin)
 
 
     const auth = getAuth();
-    // const googleProvider = new GoogleAuthProvider();
 
     const registerUser = (email, password, name, history) => {
         setIsLoading(true);
@@ -63,29 +61,11 @@ const useFirebase = () => {
             .then(data => setAdmin(data.admin))
     }, [user.email])
 
-    // const signInWithGoogle = (location, history) => {
-    //     setIsLoading(true);
-    //     signInWithPopup(auth, googleProvider)
-    //         .then((result) => {
-    //             const user = result.user;
-    //             saveUser(user.email, user.displayName, 'PUT');
-    //             setAuthError('');
-    //             const destination = location?.state?.from || '/';
-    //             history.replace(destination);
-    //         }).catch((error) => {
-    //             setAuthError(error.message);
-    //         }).finally(() => setIsLoading(false));
-    // }
-
     // observe user state
     useEffect(() => {
         const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
-                // getIdToken(user)
-                //     .then(idToken => {
-                //         setToken(idToken);
-                //     })
             } else {
                 setUser({})
             }

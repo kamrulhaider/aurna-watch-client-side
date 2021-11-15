@@ -33,11 +33,11 @@ const AddProduct = () => {
             .then(res => res.json())
             .then(data => {
                 if (data.acknowledged) {
-                    console.log(data);
                     setSuccess(true);
                 }
             })
         e.preventDefault()
+        e.target.reset()
     }
     return (
         <div className="container">
@@ -49,7 +49,7 @@ const AddProduct = () => {
                 <input onBlur={handleUrl} className="form-control my-2" placeholder="image url" type="text" />
                 <button type="submit" className="btn btn-outline-success mb-4">Post</button>
             </form>
-            {success && <Alert>Made Admin successfully!</Alert>}
+            {success && <Alert>Successfully Added</Alert>}
         </div>
     );
 };
