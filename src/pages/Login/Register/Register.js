@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { Alert, Button, Form, Spinner } from 'react-bootstrap';
-import { Link, useHistory, useLocation } from 'react-router-dom';
+import { Form, Button, Spinner, Alert } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-
-const Login = () => {
+const Register = () => {
     const [loginData, setLoginData] = useState({});
-    const { user, loginUser, isLoading, authError } = useAuth();
-    const location = useLocation();
+    const { user, registerUser, isLoading, authError } = useAuth();
     const history = useHistory();
 
 
@@ -19,7 +17,7 @@ const Login = () => {
     }
 
     const handleLoginSubmit = e => {
-        loginUser(loginData.email, loginData.password, location, history);
+        registerUser(loginData.email, loginData.password, loginData.name, history);
         e.preventDefault();
 
     }
@@ -27,8 +25,16 @@ const Login = () => {
     return (
         <div className="container d-flex justify-content-center">
             <div className="w-50">
-                <h4 className="text-center">Login</h4>
+                <h4 className="text-center">Please Register with proper details</h4>
                 {!isLoading && <Form onSubmit={handleLoginSubmit}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Your Name</Form.Label>
+                        <Form.Control
+                            type="text"
+                            name="name"
+                            onBlur={handleonBlur}
+                            placeholder="Enter your name" />
+                    </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
@@ -51,14 +57,14 @@ const Login = () => {
                     </Button>
                 </Form>}
                 {isLoading && <Spinner animation="grow" variant="success" />}
-                {user?.email && <Alert className="text-success mt-3">User Login successfully!</Alert>}
+                {user?.email && <Alert className="text-success mt-3">User Created successfully!</Alert>}
                 {authError && <Alert className="text-danger mt-3">{authError}</Alert>}
-                <Link to="/register">
-                    New to the site? Please register
+                <Link to="/login">
+                    Already In? Please Login
                 </Link>
             </div>
         </div>
     );
 };
 
-export default Login;
+export default Register;

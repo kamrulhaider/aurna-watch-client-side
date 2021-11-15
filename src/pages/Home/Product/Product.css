@@ -1,0 +1,13 @@
+.service {
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.service-img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+.service:hover {
+  box-shadow: 5px 5px 5px gray;
+}
