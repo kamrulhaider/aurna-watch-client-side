@@ -123,7 +123,6 @@ const useFirebase = () => {
         isLoading,
         loginUser,
         authError,
-        loginUser,
         logout,
     }
 }

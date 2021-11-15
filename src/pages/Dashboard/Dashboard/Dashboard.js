@@ -5,7 +5,7 @@ import {
     Link,
     useRouteMatch
 } from "react-router-dom";
-import { Row, Spinner } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 import MyOrders from '../MyOrders/MyOrders';
 import Pay from '../Pay/Pay';
 import GiveReview from '../GiveReview/GiveReview';
