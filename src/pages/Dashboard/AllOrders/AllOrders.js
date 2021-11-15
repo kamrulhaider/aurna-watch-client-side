@@ -6,7 +6,7 @@ const AllOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://afternoon-citadel-17218.herokuapp.com/users')
             .then(res => res.json())
             .then(data => setOrders(data));
     }, [])
@@ -14,7 +14,7 @@ const AllOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm("Are you sure to delete?")
         if (proceed) {
-            const url = `http://localhost:5000/users/${id}`
+            const url = `https://afternoon-citadel-17218.herokuapp.com/users/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

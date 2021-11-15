@@ -17,7 +17,7 @@ const GiveReview = () => {
 
     const handleAdminSubmit = e => {
         const user = { name, comment, rating };
-        fetch('http://localhost:5000/review', {
+        fetch('https://afternoon-citadel-17218.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

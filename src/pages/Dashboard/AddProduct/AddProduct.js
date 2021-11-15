@@ -23,7 +23,7 @@ const AddProduct = () => {
 
     const handleAdminSubmit = e => {
         const user = { name, details, price, img };
-        fetch('http://localhost:5000/services', {
+        fetch('https://afternoon-citadel-17218.herokuapp.com/services', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

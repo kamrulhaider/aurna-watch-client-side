@@ -11,7 +11,7 @@ const ProductDetails = () => {
     const [details, setDetails] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${productId}`)
+        fetch(`https://afternoon-citadel-17218.herokuapp.com/services/${productId}`)
             .then(res => res.json())
             .then(data => setDetails(data))
     }, [user])
@@ -19,7 +19,7 @@ const ProductDetails = () => {
     const { register, handleSubmit, reset, watch, formState: { errors } } = useForm();
 
     const onSubmit = data => {
-        axios.post('http://localhost:5000/users', data)
+        axios.post('https://afternoon-citadel-17218.herokuapp.com/users', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Order Placed');

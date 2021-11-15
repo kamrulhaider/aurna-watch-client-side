@@ -20,8 +20,8 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <Container>
-                <h3 className="text-center my-3 fw-bold">Service List</h3>
-                <p className="text-center mb-5">Atlantic Cliff uses an artificial intelligence based system that tracks real-time data ensuring fast delivery. Whether your delivery is for your customer or someone you care for, we will deliver it with care.</p>
+                <h3 className="text-center my-3 fw-bold">Products List</h3>
+                <p className="text-center mb-5">We’re all so digital, but the ’50s was the era of watches you had to wind. When Sir Edmund Hillary and Tenzing Norgay reached the summit of Everest in 1953, Hillary was equipped with a Rolex Oyster Perpetual.– Sara Sheridan</p>
                 <Row xs={1} md={3} className="g-4">
                     {
                         slicedProduct.map(product => <Product
