@@ -1,6 +1,7 @@
 # Aurna Watch
 
 Live link of this project [Visit](https://aurna-watch.web.app/).
+Server link of this project [Visit](https://github.com/kamrulhaider/aurna-watch-server-side).
 
 ## Project Details:
 
