@@ -1,15 +1,15 @@
 # Aurna Watch
 
-Live link of this project [Visit our site](https://aurna-watch.web.app/).
+Live link of this project [Visit](https://aurna-watch.web.app/).
 
-# About This Site
+## About This Site
 
-# Project Details: 
+## Project Details:
 
--It is a niche website project of the watch. Here registered users can order watches and manage their orders.  
+- It is a niche website project of the watch. Here registered users can order watches and manage their orders.
 
--Established Admin and User-based separate dashboard. An admin can manage all the user's orders also can add or remove a product.  
+- Established Admin and User-based separate dashboard. An admin can manage all the user's orders also can add or remove a product.
 
--Use of Firebase email-password login system. A new visitor needs to register to place an order. 
+- Use of Firebase email-password login system. A new visitor needs to register to place an order.
 
-# Technology: ReactJs, React-bootstrap, Firebase, React Router, MongoDB, Heroku. 
+**Technology**: ReactJs, React-bootstrap, Firebase, React Router, MongoDB, Heroku.
