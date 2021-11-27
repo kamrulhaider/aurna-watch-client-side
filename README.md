@@ -2,8 +2,6 @@
 
 Live link of this project [Visit](https://aurna-watch.web.app/).
 
-## About This Site
-
 ## Project Details:
 
 - It is a niche website project of the watch. Here registered users can order watches and manage their orders.
