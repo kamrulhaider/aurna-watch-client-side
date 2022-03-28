@@ -1,8 +1,18 @@
 .banner {
-  background-image: url(../../../images/banner-bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 300px;
-  border-radius: 10px;
+    background-image: url(../../../images/banner-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+}
+.banner-text {
+    width: 75%;
+}
+@media (max-width: 575.98px) {
+    .banner {
+        height: 300px;
+    }
+    .banner-text {
+        width: 100%;
+    }
 }

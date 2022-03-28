@@ -1,0 +1,21 @@
+.carousel-bg {
+    background-image: radial-gradient(
+        circle farthest-corner at 50% 20%,
+        rgba(147, 230, 241, 1) 0%,
+        rgb(153, 202, 214) 80%
+    );
+    border-radius: 5px;
+}
+
+.slider-height {
+    height: 200px;
+}
+.review-details {
+    width: 75%;
+    text-align: center;
+}
+@media (max-width: 575.98px) {
+    .review-details {
+        width: 100%;
+    }
+}

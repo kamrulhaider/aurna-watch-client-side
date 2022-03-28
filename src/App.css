@@ -1,39 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap");
 * {
-  font-family: "Kanit", sans-serif;
+    font-family: "Kanit", sans-serif;
+}
+body {
+    background: #bdc3c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #2c3e50,
+        #bdc3c7
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #2c3e50,
+        #bdc3c7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.header-bg {
+    background: #bdc3c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+        to right,
+        #2c3e50,
+        #bdc3c7
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to right,
+        #2c3e50,
+        #bdc3c7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.logo-name {
+    color: #ffffff !important;
+    font-size: 2rem;
+}
+.global-text {
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.global-para {
+    color: #c0c0c0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.route-name {
+    background-image: linear-gradient(
+        to right,
+        #485563 0%,
+        #29323c 51%,
+        #485563 100%
+    );
+}
+.route-name {
+    margin: 10px;
+    padding: 5px 30px !important;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white !important;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.route-name:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.user-name {
+    background: none !important;
+    font-size: 1rem;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0);
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (max-width: 575.98px) {
+    .route-name {
+        background-color: transparent;
+        margin: auto;
+    }
 }

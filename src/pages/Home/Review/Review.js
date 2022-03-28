@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row } from 'react-bootstrap';
+import { Carousel, Container, Row } from 'react-bootstrap';
 import Rating from "react-rating-stars-component";
+import './Review.css';
 
 const Review = () => {
     const [review, setReview] = useState([]);
@@ -14,8 +15,26 @@ const Review = () => {
     return (
         <div>
             <Container>
-                <h3 className="text-center my-3 fw-bold">Our Customer Review</h3>
-                <Row className="g-2">
+                <h2 className="text-center my-4 fw-bold global-text">Our Customer Review</h2>
+                <p className="text-center mb-5 banner-text mx-auto global-para">Satisfied Customer given their opinion about our services. Customer's satisfaction is out key to success.</p>
+                <Carousel className="carousel-bg">
+                    {
+                        review.map(data => <Carousel.Item className="slider-height">
+                            <div className="review-details m-auto py-4 px-2 rounded-3 d-flex align-items-center flex-column">
+                                <h3 className="text-dark">{data.name}</h3>
+                                <p className="text-muted">"{data.comment}"</p>
+                                <Rating
+                                    edit={false}
+                                    value={parseInt(data.rating)}
+                                    count={5}
+                                    size={20}
+                                    activeColor="#518C91"
+                                />
+                            </div>
+                        </Carousel.Item>)
+                    }
+                </Carousel>
+                {/* <Row className="g-2">
                     {
                         review.map(data => <div
                             className="col-md-3"
@@ -34,7 +53,7 @@ const Review = () => {
                             </div>
                         </div>)
                     }
-                </Row>
+                </Row> */}
             </Container>
         </div>
     );
