@@ -32,7 +32,6 @@ const Home = () => {
             </Container>
             <Review></Review>
             <Featured></Featured>
-            <Footer></Footer>
         </div>
     );
 };

@@ -23,7 +23,6 @@ const Products = () => {
                         ></Product>)
                     }
                 </Row>
-                <Footer></Footer>
             </Container>
         </div>
     );

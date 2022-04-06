@@ -8,7 +8,7 @@
 }
 
 .slider-height {
-    height: 200px;
+    height: fit-content;
 }
 .review-details {
     width: 75%;

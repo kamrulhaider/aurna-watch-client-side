@@ -74,7 +74,9 @@ body {
 }
 @media (max-width: 575.98px) {
     .route-name {
-        background-color: transparent;
-        margin: auto;
+        margin-bottom: 5px;
+    }
+    .logo-name {
+        font-size: 1rem;
     }
 }
