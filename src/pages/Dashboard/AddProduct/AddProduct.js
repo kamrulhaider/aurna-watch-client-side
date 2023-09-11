@@ -23,16 +23,13 @@ const AddProduct = () => {
 
   const handleAdminSubmit = (e) => {
     const user = { name, details, price, img };
-    fetch(
-      "https://aurna-watch-server-side-production.up.railway.app/services",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(user),
-      }
-    )
+    fetch("https://aurna-watch-server-side.vercel.app/services", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data.acknowledged) {

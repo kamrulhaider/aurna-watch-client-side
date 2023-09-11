@@ -17,7 +17,7 @@ const GiveReview = () => {
 
   const handleAdminSubmit = (e) => {
     const user = { name, comment, rating };
-    fetch("https://aurna-watch-server-side-production.up.railway.app/review", {
+    fetch("https://aurna-watch-server-side.vercel.app/review", {
       method: "POST",
       headers: {
         "content-type": "application/json",

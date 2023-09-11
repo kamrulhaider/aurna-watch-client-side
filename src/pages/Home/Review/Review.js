@@ -7,7 +7,7 @@ const Review = () => {
   const [review, setReview] = useState([]);
 
   useEffect(() => {
-    fetch("https://aurna-watch-server-side-production.up.railway.app/review")
+    fetch("https://aurna-watch-server-side.vercel.app/review")
       .then((res) => res.json())
       .then((data) => setReview(data));
   }, []);
