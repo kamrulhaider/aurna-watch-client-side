@@ -23,7 +23,7 @@ const AddProduct = () => {
 
   const handleAdminSubmit = (e) => {
     const user = { name, details, price, img };
-    fetch("https://aurna-watch-server-side.vercel.app/services", {
+    fetch("https://aurna-watch-api-server.onrender.com/services", {
       method: "POST",
       headers: {
         "content-type": "application/json",

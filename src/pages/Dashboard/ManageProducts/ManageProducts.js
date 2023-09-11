@@ -6,7 +6,7 @@ const ManageProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://aurna-watch-server-side.vercel.app/services")
+    fetch("https://aurna-watch-api-server.onrender.com/services")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -14,7 +14,7 @@ const ManageProducts = () => {
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete?");
     if (proceed) {
-      const url = `https://aurna-watch-server-side.vercel.app/services/${id}`;
+      const url = `https://aurna-watch-api-server.onrender.com/services/${id}`;
       fetch(url, {
         method: "DELETE",
       })

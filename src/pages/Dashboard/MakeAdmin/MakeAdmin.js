@@ -12,7 +12,7 @@ const MakeAdmin = () => {
   };
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("https://aurna-watch-server-side.vercel.app/admin", {
+    fetch("https://aurna-watch-api-server.onrender.com/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

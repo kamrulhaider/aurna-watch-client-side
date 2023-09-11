@@ -11,7 +11,7 @@ const ProductDetails = () => {
   const [details, setDetails] = useState({});
 
   useEffect(() => {
-    fetch(`https://aurna-watch-server-side.vercel.app/services/${productId}`)
+    fetch(`https://aurna-watch-api-server.onrender.com/services/${productId}`)
       .then((res) => res.json())
       .then((data) => setDetails(data));
   }, [user]);
@@ -26,7 +26,7 @@ const ProductDetails = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("https://aurna-watch-server-side.vercel.app/users", data)
+      .post("https://aurna-watch-api-server.onrender.com/users", data)
       .then((res) => {
         if (res.data.insertedId) {
           alert("Order Placed");
