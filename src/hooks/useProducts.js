@@ -4,7 +4,7 @@ const useProducts = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://aurna-watch-server-side-production.up.railway.app/services")
+    fetch("https://aurna-watch-server-side.vercel.app/services")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
