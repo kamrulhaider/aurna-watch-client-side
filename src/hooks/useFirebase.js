@@ -60,7 +60,7 @@ const useFirebase = () => {
   };
 
   useEffect(() => {
-    fetch(`https://aurna-watch-api-server.onrender.com/admin/${user.email}`)
+    fetch(`https://aurna-watch-server-side.vercel.app/admin/${user.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -92,7 +92,7 @@ const useFirebase = () => {
 
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("https://aurna-watch-api-server.onrender.com/admin", {
+    fetch("https://aurna-watch-server-side.vercel.app/admin", {
       method: method,
       headers: {
         "content-type": "application/json",
